@@ -51,6 +51,9 @@
             $(".project-entry:last").append(replace(HTMLprojectTitle, project.title))
                 .append(replace(HTMLprojectDates, project.dates))
                 .append(replace(HTMLprojectDescription, project.description));
+            project.images.forEach((image) => {
+                $(".project-entry:last").append(replace(HTMLprojectImage, image));
+            });
         });
     };
 
@@ -177,17 +180,17 @@
             title: "string-project1-title",
             dates: "string-project1-date",
             description: "project description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
-            images: ["images/197x148.gift", "images/197x148.gift", "images/197x148.gift"]
+            images: ["images/projectImg.gif", "images/projectImg.gif", "images/projectImg.gif"]
         }, {
             title: "string-project2-title",
             dates: "string-project2-date",
             description: "project description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
-            images: ["images/197x148.gift", "images/197x148.gift", "images/197x148.gift"]
+            images: ["images/projectImg.gif", "projectImg.gif", "projectImg.gif"]
         }, {
             title: "string-project3-title",
             dates: "string-project3-date",
             description: "project description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
-            images: ["images/197x148.gift", "images/197x148.gift", "images/197x148.gift"]
+            images: ["images/projectImg.gif", "images/projectImg.gif", "images/projectImg.gif"]
         }],
         display: function() {
             renderProjects("#projects", this.projects);
