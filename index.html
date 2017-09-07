@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Resume</title>
     <link href="css/style.css" rel="stylesheet">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCjPkuz18Tql4lxSuxTWGOvMnOxgl2dInI"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -33,9 +34,64 @@
         </div>
     </div>
 
+
     <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
     <script src="js/resumeBuilder.js"></script>
+    <script src="js/helper.js"></script>
+
+    <!-- <script>
+        function initMap() {
+            const myOptions = {
+                zoom: 8,
+                center: {
+                    lat: 25.7617,
+                    lng: -80.1918
+                }
+            }
+
+            let map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            // const myMarker = {
+            //     position: {
+            //         lat: 25.8576,
+            //         lng: -80.2781
+            //     },
+            //     map: map,
+            //     icon: "images/home.svg"
+            // };
+
+            // let marker = new google.maps.Marker(myMarker);
+
+            // const myPopUp = {
+            //     content: "My home"
+            // };
+
+            // let infoWindow = new google.maps.InfoWindow(myPopUp);
+
+            // marker.addListener("click", function() {
+            //     infoWindow.open(map, marker);
+            // })
+
+            addMarker(
+                26.5629, -81.9495
+            );
+            addMarker(
+                26.000, -78.9495
+            );
+
+            function addMarker(x, y) {
+                const myMarker = {
+                    position: {
+                        lat: x,
+                        lng: y
+                    },
+                    map: map,
+                };
+                let marker = new google.maps.Marker(myMarker);
+            }
+        }
+    </script> -->
+
     <!-- <script>
         // // if (document.getElementsByClassName('flex-item').length === 0) {
         // //     document.getElementById('topContacts').style.display = 'none';
