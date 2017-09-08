@@ -13,8 +13,15 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderName = '<h1 id="name">%data% </h1><hr>';
+var HTMLheaderRole = '<small>%data%</small>';
+
+var HTMLNav = '<nav id="header-nav" class="navbar"><ul id="header-nav-ul" class="nav navbar-nav navbar-right"></ul></nav>';
+var HTMLWorkAnchor = '<li id="workLink"><a href="#workExperience"><span class="entypo-tools"></span></a></li>';
+var HTMLProjectAnchor = '<li id="projectsLink"><a href="#projects"><span class="entypo-briefcase"></span></a></li>';
+var HTMLEducationAnchor = '<li id="educationLink"><a href="#education"><span class="entypo-book"></a></li>';
+var HTMLMapAnchor = '<li id="mapLink"><a href="#mapDiv"><span class="entypo-globe"></a></li>';
+var HTMLDownloadAnchor = '<li id="printPage"><a href="#mapDiv"><span class="entypo-download"></a></li>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';

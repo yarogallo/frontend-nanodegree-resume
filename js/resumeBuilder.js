@@ -3,8 +3,9 @@ function replace(str, newSubStr) {
 };
 
 function renderName($where, name, role) {
-    $where.prepend(replace(HTMLheaderRole, role))
-        .prepend(replace(HTMLheaderName, name));
+    $where.prepend(replace(HTMLheaderName, name));
+    $("#name").append(replace(HTMLheaderRole, role));
+
 };
 
 function renderContact($where, contacts) {
@@ -84,6 +85,15 @@ function renderMap($where) {
     $where.append(googleMap);
 };
 
+function renderNav($where) {
+    $where.prepend(HTMLNav);
+    $("#header-nav-ul").append(HTMLWorkAnchor)
+        .append(HTMLProjectAnchor)
+        .append(HTMLMapAnchor)
+        .append(HTMLEducationAnchor)
+        .append(HTMLDownloadAnchor);
+}
+
 const bio = {
     name: "Yanisleidi Rodriguez",
     role: "Front-End Web Developer",
@@ -95,7 +105,7 @@ const bio = {
         location: "San Francisco"
     },
     welcomeMessage: "Hi there",
-    skills: ["skill1", "skill2", "skill3", "skill4", "skill5"],
+    skills: ["sagittis aliquam", "egestas", "malesuada bibendum", "morbi tempus"],
     biopic: "images/fry.jpg",
     display: function() {
 
@@ -209,12 +219,13 @@ const projects = {
 
 $(window).on("load", () => {
     var mapDiv = $("#mapDiv");
+    var header = $("#header");
 
     bio.display();
     education.display();
     work.display();
     projects.display();
-    renderMap(mapDiv)
-
+    renderMap(mapDiv);
+    renderNav(header);
 
 });
