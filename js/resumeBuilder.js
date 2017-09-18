@@ -22,14 +22,14 @@ const bio = {
         var location = replaceIn(HTMLlocation, this.contacts.location);
 
         var bioPic = replaceIn(HTMLbioPic, this.biopic);
-        var welcomeMsg = replaceIn(HTMLwelcomeMsg, this.welcomeMessage)
+        var welcomeMsg = replaceIn(HTMLwelcomeMsg, this.welcomeMessage);
 
         $("#header").prepend(name);
         appendTo($("#name"), role);
         appendTo($("#topContacts"), mobile, twitter, email, gitHub, location);
         appendTo($("#header"), bioPic, welcomeMsg, HTMLskillsStart);
 
-        appendTo($("#footerContacts"), mobile, twitter, email, gitHub, location)
+        appendTo($("#footerContacts"), mobile, twitter, email, gitHub, location);
 
         this.skills.forEach((skill) => {
             var currentSkill = replaceIn(HTMLskills, skill);
@@ -75,11 +75,11 @@ const education = {
             var dates = replaceIn(HTMLschoolDates, school.dates);
             var location = replaceIn(HTMLschoolLocation, school.location);
             appendTo($("#education"), HTMLschoolStart);
-            appendTo($(".education-entry:last"), schoolDegreeName, dates, location)
+            appendTo($(".education-entry:last"), schoolDegreeName, dates, location);
 
             school.majors.forEach((major) => {
-                var major = replaceIn(HTMLschoolMajor, major);
-                appendTo($(".education-entry:last"), major);
+                var majorTag = replaceIn(HTMLschoolMajor, major);
+                appendTo($(".education-entry:last"), majorTag);
             });
         });
 
@@ -157,8 +157,8 @@ const projects = {
             appendTo($(".project-entry:last"), title, dates, description);
 
             project.images.forEach((image) => {
-                var image = replaceIn(HTMLprojectImage, image);
-                appendTo($(".project-entry:last"), image);
+                var imgTag = replaceIn(HTMLprojectImage, image);
+                appendTo($(".project-entry:last"), imgTag);
             });
         });
     }
@@ -166,7 +166,7 @@ const projects = {
 
 function replaceIn(str, newSubStr) {
     return str.replace("%data%", newSubStr);
-};
+}
 
 function appendTo($where, ...elements) {
     elements.forEach(elem => $where.append(elem));
@@ -174,11 +174,10 @@ function appendTo($where, ...elements) {
 
 function renderMap($where) {
     appendTo($where, googleMap);
-};
+}
 
 $(window).on("load", () => {
     var mapDiv = $("#mapDiv");
-    var header = $("#header");
     var brand = $(".navbar-brand");
 
     bio.display();

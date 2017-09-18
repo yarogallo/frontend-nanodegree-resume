@@ -24,7 +24,8 @@ hr {
 
 .education-entry,
 .work-entry,
-.project-entry {
+.project-entry,
+.navbar {
     padding: 0 5%;
 }
 
@@ -125,15 +126,15 @@ a {
 }
 
 .dark-gray {
-    background-color: #4a4a4a;
+    background-color: #484848;
+}
+
+.text-dark-gray {
+    color: #484848;
 }
 
 
 /* TODO: Replace with image later */
-
-#header {
-    background-color: #484848;
-}
 
 .flex-box {
     display: -webkit-flex;
@@ -185,6 +186,7 @@ span {
     #lets-connect {
         margin-top: 5%;
     }
+    ;
 }
 
 @media only screen and (max-width:900px) {
@@ -221,5 +223,11 @@ span {
     #skills-h3,
     .biopic {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-item {
+        margin-left: 0;
     }
 }
