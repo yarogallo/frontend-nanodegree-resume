@@ -1,35 +1,13 @@
-/*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
-
 var HTMLheaderName = '<h1 id="name">%data% </h1><hr>';
 var HTMLheaderRole = '<small>%data%</small>';
 
-var HTMLNav = '<nav id="header-nav" class="navbar"><ul id="header-nav-ul" class="nav navbar-nav navbar-right"></ul></nav>';
-var HTMLWorkAnchor = '<li id="workLink"><a href="#workExperience"><span class="entypo-tools"></span></a></li>';
-var HTMLProjectAnchor = '<li id="projectsLink"><a href="#projects"><span class="entypo-briefcase"></span></a></li>';
-var HTMLEducationAnchor = '<li id="educationLink"><a href="#education"><span class="entypo-book"></a></li>';
-var HTMLMapAnchor = '<li id="mapLink"><a href="#mapDiv"><span class="entypo-globe"></a></li>';
-var HTMLDownloadAnchor = '<li id="printPage"><a href="#mapDiv"><span class="entypo-download"></a></li>';
-
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile:</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email:</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter:</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github:</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog:</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location:</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -70,13 +48,13 @@ var googleMap = '<div id="map"></div>';
 /*
 The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
-$(document).ready(function() {
-    $('button').click(function() {
-        var $name = $('#name');
-        var iName = inName($name.text()) || function() {};
-        $name.html(iName);
-    });
-});
+// $(document).ready(function() {
+//     $('button').click(function() {
+//         var $name = $('#name');
+//         var iName = inName($name.text()) || function() {};
+//         $name.html(iName);
+//     });
+// });
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.

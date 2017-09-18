@@ -3,31 +3,50 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Resume</title>
+    <script src="js/jQuery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <link href="css/nav.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCjPkuz18Tql4lxSuxTWGOvMnOxgl2dInI"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
     <div id="main">
-        <div id="header" class="center-content clear-fix">
+        <div id="page-nav" class="gray">
+            <nav class="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-list" aria-expanded="false">
+                    <span class="glyphicon glyphicon-menu-hamburger camper"></span>
+                </button>
+                <a class="navbar-brand text-uppercase bold orange-text left-space-none animated-brand" href="#">My Online Resume</a>
+                <div class="collapse navbar-collapse" id="collapse-list">
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item"><a href="#workExperience" class="bold text-dark-gray"><span class="glyphicon glyphicon-briefcase"></span>Jobs</a></li>
+                        <li class="nav-item"><a href="#projects" class="bold text-dark-gray"><span class="glyphicon glyphicon-folder-open"></span>Projects</a></li>
+                        <li class="nav-item"><a href="#education" class="bold text-dark-gray"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+                        <li class="nav-item"><a href="#mapDiv" class="bold text-dark-gray"><span class="glyphicon glyphicon-map-marker"></span>Places</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="header" class="center-content clear-fix dark-gray">
             <ul id="topContacts" class="flex-box"></ul>
         </div>
         <div style="clear: both;"></div>
         <div id="workExperience" class="gray">
-            <h2>Work Experience</h2>
+            <h2>Work Experience<span class="glyphicon glyphicon-briefcase"></h2>
         </div>
         <div id="projects">
-            <h2>Projects</h2>
+            <h2>Projects<span class="glyphicon glyphicon-folder-open"></h2>
         </div>
         <div id="education" class="gray">
-            <h2>Education</h2>
+            <h2>Education<span class="glyphicon glyphicon-education"></h2>
         </div>
         <div id="mapDiv">
-            <h2>Where I've Lived and Worked</h2>
+            <h2>Where I've Lived and Worked<span class="glyphicon glyphicon-map-marker"></h2>
         </div>
         <div id="lets-connect" class="dark-gray">
             <h2 class="orange center-text">Let's Connect</h2>
@@ -35,88 +54,9 @@
             </ul>
         </div>
     </div>
-
-
-    <script src="js/jQuery.js"></script>
     <script src="js/resumeBuilder.js"></script>
     <script src="js/helper.js"></script>
-
-    <!-- <script>
-        function initMap() {
-            const myOptions = {
-                zoom: 8,
-                center: {
-                    lat: 25.7617,
-                    lng: -80.1918
-                }
-            }
-
-            let map = new google.maps.Map(document.getElementById("map"), myOptions);
-
-            // const myMarker = {
-            //     position: {
-            //         lat: 25.8576,
-            //         lng: -80.2781
-            //     },
-            //     map: map,
-            //     icon: "images/home.svg"
-            // };
-
-            // let marker = new google.maps.Marker(myMarker);
-
-            // const myPopUp = {
-            //     content: "My home"
-            // };
-
-            // let infoWindow = new google.maps.InfoWindow(myPopUp);
-
-            // marker.addListener("click", function() {
-            //     infoWindow.open(map, marker);
-            // })
-
-            addMarker(
-                26.5629, -81.9495
-            );
-            addMarker(
-                26.000, -78.9495
-            );
-
-            function addMarker(x, y) {
-                const myMarker = {
-                    position: {
-                        lat: x,
-                        lng: y
-                    },
-                    map: map,
-                };
-                let marker = new google.maps.Marker(myMarker);
-            }
-        }
-    </script> -->
-
-    <!-- <script>
-        // // if (document.getElementsByClassName('flex-item').length === 0) {
-        // //     document.getElementById('topContacts').style.display = 'none';
-        // // }
-        // if (document.getElementsByTagName('h1').length === 0) {
-        //     document.getElementById('header').style.display = 'none';
-        // }
-        // if (document.getElementsByClassName('work-entry').length === 0) {
-        //     document.getElementById('workExperience').style.display = 'none';
-        // }
-        // if (document.getElementsByClassName('project-entry').length === 0) {
-        //     document.getElementById('projects').style.display = 'none';
-        // }
-        // if (document.getElementsByClassName('education-entry').length === 0) {
-        //     document.getElementById('education').style.display = 'none';
-        // }
-        // if (document.getElementsByClassName('flex-item').length === 0) {
-        //     document.getElementById('lets-connect').style.display = 'none';
-        // }
-        // if (document.getElementById('map') === null) {
-        //     document.getElementById('mapDiv').style.display = 'none';
-        // }
-    </script> -->
+    
 </body>
 
 </html>
