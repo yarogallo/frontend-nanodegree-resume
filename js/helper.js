@@ -91,14 +91,14 @@ function initializeMap() {
         //location where I have been living or working or study.
         var locations = [];
 
-        locations.push({ location: bio.contacts.location, place: "home" });
+        locations.push({ location: data.bio.contacts.location, place: "home" });
 
-        education.schools.forEach(function(school) {
+        data.education.schools.forEach(function(school) {
             locations.push({ location: school.location, place: "school" });
         });
 
 
-        work.jobs.forEach(function(job) {
+        data.work.jobs.forEach(function(job) {
             locations.push({ location: job.location, place: "job" });
         });
 
